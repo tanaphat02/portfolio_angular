@@ -57,7 +57,7 @@ export class ExperienceComponent implements OnInit {
           'assets/images/portfolio2.png',
           'assets/images/portfolio3.png'
         ],
-        githubUrl: 'https://github.com/tanaphat02/portfolio-angular'
+        githubUrl: 'https://github.com/tanaphat02/portfolio_angular'
       }
     ];
   }
