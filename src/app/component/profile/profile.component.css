@@ -1,0 +1,132 @@
+.profile-hero {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  padding: 4rem 2rem;
+  background: #fff;
+  color: #2c3e50;
+}
+
+.profile-column {
+  flex: 1;
+  min-width: 280px;
+  max-width: 340px;
+  background: #fefefe;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 0 16px rgba(0, 0, 0, 0.06);
+  transition: transform 0.3s ease;
+
+  &:hover {
+    transform: translateY(-4px);
+  }
+
+  h3 {
+    color: #e74c3c;
+    margin-bottom: 1rem;
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+
+    li {
+      margin-bottom: 0.5rem;
+      position: relative;
+      padding-left: 1.2rem;
+
+      &::before {
+        content: "•";
+        position: absolute;
+        left: 0;
+        color: #e74c3c;
+      }
+    }
+  }
+
+  a mat-icon {
+    font-size: 28px;
+    color: #555;
+    transition: color 0.3s;
+
+    &:hover {
+      color: #e74c3c;
+    }
+  }
+}
+
+.personal {
+  background: #e74c3c;
+  color: #fff;
+  text-align: center;
+
+  img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.2);
+  }
+
+  h3 {
+    color: #fff;
+    margin-top: 0.5rem;
+  }
+
+  .subtitle {
+    font-style: italic;
+    color: #ffe;
+    margin-bottom: 1rem;
+  }
+
+  ul li::before {
+    color: #fff;
+  }
+
+  a mat-icon {
+    color: #fff;
+
+    &:hover {
+      color: #000;
+    }
+  }
+}
+
+.skills-group {
+  margin-bottom: 1.5rem;
+
+  h4 {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+    color: #e74c3c;
+  }
+}
+
+.education h3 {
+  color: #e74c3c;
+  margin-top: 1rem;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1rem;
+
+    a {
+      text-decoration: none; /* ยกเลิกเส้นใต้จากลิงก์ */
+      color: inherit; /* ใช้สีของ parent element */
+      
+      mat-icon {
+        font-size: 40px; /* ขยายขนาดไอคอน */
+        color: #555; /* ตั้งสีไอคอนเป็นสีเทา */
+        transition: color 0.3s ease; /* ทำให้การเปลี่ยนสีมีความลื่นไหล */
+
+        &:hover {
+          color: #e74c3c; /* เปลี่ยนสีเมื่อ hover เป็นสีแดง */
+        }
+      }
+    }
+  }

@@ -1,0 +1,75 @@
+<div class="container">
+  <div class="experience-container">
+
+    <!-- Internships and Work Experience -->
+    <div class="internships">
+      <h3 class="sub-title">Internships & Work Experience</h3>
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="timeline-header">
+              <span class="timeline-date">Apr 2024 - Jun 2024</span>
+              <h4 class="timeline-title">Developer Intern</h4>
+              <h5 class="timeline-company">S2N Pixel Co., Ltd.</h5>
+            </div>
+            <div class="timeline-body">
+              <p>
+                Developed an e-commerce website using Adonis.js framework.<br />
+                Gained hands-on experience in web development with Adonis.js and Laravel.
+              </p>
+              <div class="skills-used">
+                <span class="skill">HTML/CSS</span>
+                <span class="skill">JavaScript</span>
+                <span class="skill">TypeScript</span>
+                <span class="skill">Adonis.js</span>
+                <span class="skill">Laravel</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Projects -->
+    <div class="projects">
+      <h3 class="sub-title">Highlighted Projects</h3>
+      <div class="project-grid">
+        <div class="project-card" *ngFor="let project of projects">
+          <img [src]="project.imageUrls[0]" alt="{{ project.title }}" class="project-image" />
+          <div class="project-info">
+            <h4>{{ project.title }}</h4>
+            <p>{{ project.longDescription | slice: 0:200 }}...</p>
+            <div class="project-actions">
+              <button mat-button color="primary" (click)="openProjectModal(project)">View Details</button>
+              <a mat-button [href]="project.githubUrl" target="_blank" style="text-decoration: none; color: #e74c3c;">
+                <i class="fa-brands fa-github"></i> View Code
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal-overlay" *ngIf="selectedProject" (click)="closeProjectModal()">
+      <div class="modal-content" (click)="$event.stopPropagation()">
+        <span class="close-btn" (click)="closeProjectModal()">&times;</span>
+        <h2>{{ selectedProject.title }}</h2>
+        <div class="modal-images">
+          <img *ngFor="let img of selectedProject.imageUrls" [src]="img" alt="Project Image" />
+        </div>
+        <p>{{ selectedProject.longDescription }}</p>
+        <h4>Technologies Used</h4>
+        <ul>
+          <li *ngFor="let tech of selectedProject.technologies">{{ tech }}</li>
+        </ul>
+        <h4>Features</h4>
+        <ul>
+          <li *ngFor="let feat of selectedProject.features">{{ feat }}</li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+</div>
