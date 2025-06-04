@@ -78,9 +78,9 @@ export class ExperienceComponent implements OnInit {
           'Dashboard for visualizing child development data',
         ],
         imageUrls: [
-          'assets/images/kidstpes1.png',
-          'assets/images/kidstpes2.png',
-          'assets/images/kidstpes3.png',
+          'assets/images/kidsteps1.png',
+          'assets/images/kidsteps2.png',
+          'assets/images/kidsteps3.png',
         ],
         githubUrl:
           'https://github.com/tanaphat02/frontend-child-development-tracker',
